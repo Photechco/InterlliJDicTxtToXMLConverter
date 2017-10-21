@@ -13,10 +13,8 @@ import java.util.Iterator;
 import java.util.List;
 
 public class Converter {
-
     public static void main (String[] ARGS) {
-
-        try (BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\Hakon von Maydell\\Desktop\\german.txt"))){
+        try (BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\Hakon von Maydell\\Desktop\\german_small.txt"))){
 
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
@@ -55,7 +53,6 @@ public class Converter {
             DOMSource source = new DOMSource(doc);
             StreamResult result = new StreamResult(new File("C:\\Users\\Hakon von Maydell\\Desktop\\Hakon_von_Maydell.xml"));
             transformer.transform(source, result);
-
         }
 
         catch (FileNotFoundException e) {
