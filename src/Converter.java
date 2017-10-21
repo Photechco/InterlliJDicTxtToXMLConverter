@@ -33,9 +33,10 @@ public class Converter {
             dictionary.appendChild(words);
 
 
-            List<String> woerter = new ArrayList<String>();
-            String zeile = null;
+            List<String> woerter = new ArrayList<>();
+            String zeile;
             while ((zeile = br.readLine()) != null) {
+                zeile = zeile.toLowerCase();
                 woerter.add(zeile);
             }
 
